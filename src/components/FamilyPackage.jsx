@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 export default function FamilyPackage() {
   const [activeTab, setActiveTab] = useState("Monthly");
+  const navigate = useNavigate();
 
   return (
     <div className="max-w-4xl mx-auto bg-white rounded-[20px] px-6 sm:px-12 py-10 shadow-lg text-center mt-10">
@@ -9,7 +10,7 @@ export default function FamilyPackage() {
 
       {/* Tabs */}
       <div className="flex justify-center space-x-3 mb-10">
-        {["Monthly", "3 Month", "Yearly"].map((tab) => (
+        {["Monthly"].map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
@@ -45,7 +46,7 @@ export default function FamilyPackage() {
             <li>✓ Free 2 Guest Pass Every Month</li>
           </ul>
 
-          <button className="bg-orange-400 text-white w-full py-3 rounded-lg text-base font-semibold hover:bg-orange-500">
+          <button onClick={()=>navigate("/family-membership")} className="bg-orange-400 text-white w-full py-3 rounded-lg text-base font-semibold hover:bg-orange-500">
             Get started
           </button>
         </div>
