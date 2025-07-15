@@ -6,10 +6,16 @@ export default function ChooseType() {
   const navigate = useNavigate();
 
   const handleNext = () => {
-    if (selectedType) {
-      navigate("/individual-dob"); // Navigate to DOB page
-    }
-  };
+  if (selectedType === "Individual") {
+    navigate("/individual-dob");
+  } else if (selectedType === "Family") {
+    navigate("/family-packages");
+  } else {
+    // Corporate or other types
+    navigate("/individual-dob"); // or update later as needed
+  }
+};
+
 
   return (
     <div className="max-w-6xl mx-auto bg-white rounded-[20px] px-6 sm:px-12 lg:px-20 py-10 shadow-lg text-center mt-10">
