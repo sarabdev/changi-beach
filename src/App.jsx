@@ -32,7 +32,7 @@ export default function App() {
   </p>
 
   <p>
-    Once you send this, I’ll proceed to deliver the order. You’ll still have the option to request revisions and extend the review time if needed. I truly appreciate your support and understanding!
+    Once you send this, I’ll proceed to deliver the order. You will extend the review time & when review ends after 5 or 7 days then you can ask for revision. And please don't talk about this on fiverr. I truly appreciate your support and understanding!
   </p>
 </div>
 
